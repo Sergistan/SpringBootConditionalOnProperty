@@ -26,7 +26,7 @@ class ApplicationTests {
     }
 
     @Test
-    void contextLoadsDevApp() {
+    void contextLoads() {
         ResponseEntity<String> devEntity = restTemplate.getForEntity("http://localhost:" + devApp.getMappedPort(8080) + "/profile", String.class);
         Assertions.assertEquals(devEntity.getBody(), "Current profile is dev");
     }
